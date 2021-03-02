@@ -1,11 +1,6 @@
 <?php
 $varTest = 'prima';
-// echo __DIR__ . '/database/database.php';
-
-include __DIR__ . '/database/database.php';
-// var_dump($varTest);
-var_dump($dischi);
-
+require_once __DIR__ . '/database/database.php';
 ?>
 
 <!DOCTYPE html>
@@ -49,10 +44,24 @@ var_dump($dischi);
 
             <!-- DISCO ESEMPIO -->
             <div class="cd">
-              <img src="disco.poster" alt="">
-              <h3>{{disco.title}}</h3>
-              <span class="author">{{disco.author}}</span>
-              <span class="year">{{disco.year}}</span>
+              <img src=" <?php echo $dischi[0]["poster"] ?>" alt="">
+              <h3><?php echo $dischi[0]["title"] ?></h3>
+              <span class="author"><?php echo $dischi[0]["author"] ?></span>
+              <span class="year"><?php echo $dischi[0]["year"] ?></span>
+            </div>
+
+            <div class="cd">
+              <img src=" <?php echo $dischi[1]["poster"] ?>" alt="">
+              <h3><?php echo $dischi[1]["title"] ?></h3>
+              <span class="author"><?php echo $dischi[1]["author"] ?></span>
+              <span class="year"><?php echo $dischi[1]["year"] ?></span>
+            </div>
+
+            <div class="cd">
+              <img src=" <?php echo $dischi[2]["poster"] ?>" alt="">
+              <h3><?php echo $dischi[2]["title"] ?></h3>
+              <span class="author"><?php echo $dischi[2]["author"] ?></span>
+              <span class="year"><?php echo $dischi[2]["year"] ?></span>
             </div>
 
             <!-- /DISCO ESEMPIO -->

@@ -1,21 +1,20 @@
 <!-- DATABASE DISCHI -->
 <?php
-$varTest = "ciao";
 $dischi = [
   [
-    'poster' => 'ciao2.jpg',
+    'poster' => './img/no.webp',
     'title' => 'New Jersey',
     'author' => 'Bon Jovi',
     'year' => '1988'
   ],
   [
-    'poster' => 'ciao.jpg',
+    'poster' => './img/no.webp',
     'title' => 'Live at Wembley',
     'author' => 'Queen',
     'year' => '1992'
   ],
   [
-    'poster' => 'ciao.jpg',
+    'poster' => './img/no.webp',
     'title' => 'Steve Gadd Band',
     'author' => 'Steve Gadd Band',
     'year' => '2018'
