@@ -1,16 +1,52 @@
-// Attraverso una chiamata ajax all’Api di boolean avremo a disposizione una decina di dischi musicali.
-// Stampiamo tutto a schermo.
-// In questo momento non è importante la parte grafica.
-// Bonus (per oggi pomeriggio): Creare una select con i seguenti generi: pop, rock, metal e jazz. In base a cosa scegliamo nella select vedremo i corrispondenti cd.
-// Chiamata:
-// https://flynn.boolean.careers/exercises/api/array/music
-// Layout base:
-// https://bitbucket.org/booleancareers/ex-dischi-musicali-layout
-
-
-// TODO: placeholder filtro genere
+//
+// var app = new Vue ({
+//   el: '#root',
+//   data:{
+//     var1: 'Ciao',
+//   },
+//   // methods:{
+//   // }
+//   });
+// Vue.config.devtools = true;
 
 var app = new Vue ({
   el: '#root',
+  data:{
+    var1: 'ciao',
+    dischi: []
+  },
+  mounted(){
+    // alert('chiamo database php');
+    this.getDischi('server/server.php');  //Mettere percorso relativo!
+  },
+  methods:{
+    // CHIAMATA STANDARD API FILM
+    standardAPICall: function(URL){
+      return axios.get(URL,{
+              params: {
+                // api_key: '41689b28957d4803002626fc60582afd',
+                // query: 'myquery',
+                // language: 'it-IT',
+              },
+            });
+
+    },
+
+    // RICERCA FILM
+    getDischi: function(url){
+      const self = this;
+      this.standardAPICall(url)
+      .then(function(objReceived){
+            // alert('chiamata ajax con successo');
+
+            self.dischi= objReceived.data;
+             // Sovrascrivi lista con risposta alla query
+             // self.listaFilm = objReceived.data.results;
+             // Aggiungi film a listaAll
+             // self.listaAll = [...self.listaAll, ...self.listaFilm];
+
+           });
+    }
+  }
   });
 Vue.config.devtools = true;

@@ -1,6 +1,6 @@
 <?php
 $varTest = 'prima';
-require_once __DIR__ . '/database/database.php';
+require_once __DIR__ . '/server/server.php';
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +81,7 @@ require_once __DIR__ . '/database/database.php';
         <!-- /Root -->
 
 
-        <script src="main.js" charset="utf-8"></script>
+        <script src="./js/main.js" charset="utf-8"></script>
 
 
 
