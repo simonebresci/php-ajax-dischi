@@ -17,7 +17,7 @@ var app = new Vue ({
   },
   mounted(){
     // alert('chiamo database php');
-    this.getDischi('server/server.php');  //Mettere percorso relativo!
+    this.getDischi('app/server.php');  //Mettere percorso relativo!
   },
   methods:{
     // CHIAMATA STANDARD API FILM

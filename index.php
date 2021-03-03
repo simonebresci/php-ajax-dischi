@@ -1,6 +1,6 @@
 <?php
 $varTest = 'prima';
-require_once __DIR__ . '/server/server.php';
+require_once __DIR__ . '/app/server.php';
 ?>
 
 <!DOCTYPE html>
