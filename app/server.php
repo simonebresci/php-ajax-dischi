@@ -10,9 +10,7 @@ function filterByGenre($albums, $genre){
       $albumFiltered[] = $album;
     }
   }
-
   return $albumFiltered;
-
 }
 
 function codificaJson($db){

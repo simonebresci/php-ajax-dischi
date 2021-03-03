@@ -1,13 +1,16 @@
+// REFACTORING-
+// creare APICALL STANDARD CON filtro ed inserirla in filterByGenre
+
+
 var app = new Vue ({
   el: '#root',
   data:{
-    var1: 'ciao',
     filterGenre: null,
     listaGeneri: [],
     dischi: []
   },
   mounted(){
-    this.getDischi('app/server.php');  //Mettere percorso relativo!
+    this.getDischi('app/server.php');
   },
   methods:{
     // CHIAMATA STANDARD API FILM
@@ -27,16 +30,10 @@ var app = new Vue ({
       const self = this;
       this.standardAPICall(url)
       .then(function(objReceived){
-            // alert('chiamata ajax con successo');
-
             self.dischi= objReceived.data;
 
             // Popola generi
             self.getGenres();
-             // Sovrascrivi lista con risposta alla query
-             // self.listaFilm = objReceived.data.results;
-             // Aggiungi film a listaAll
-             // self.listaAll = [...self.listaAll, ...self.listaFilm];
 
            });
     },

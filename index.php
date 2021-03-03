@@ -25,24 +25,9 @@ require_once __DIR__ . '/app/server.php';
               </div>
           </header>
 
-
-          <!-- Filtro genere musicale -->
-          <!-- <div class="genere">
-            <h2>Filtro dinamico Genere</h2>
-            <select class="selezione-genere"
-                    v-model="filterGenre"
-                    @change="filtraArrayGenere">
-              <option disabled value="">Please select one</option>
-              <option> </option>
-              <option v-for="opt in listaGeneri">{{opt}}</option>
-            </select>
-
-          </div> -->
-          <!-- /Filtro genere musicale -->
-
           <div class="cds-container container">
 
-            <!-- DISCO ESEMPIO -->
+            <!-- DISCHI ESEMPIO -->
             <div class="cd">
               <img src=" <?php echo $dischi[0]["poster"] ?>" alt="">
               <h3><?php echo $dischi[0]["title"] ?></h3>
@@ -63,17 +48,8 @@ require_once __DIR__ . '/app/server.php';
               <span class="author"><?php echo $dischi[2]["author"] ?></span>
               <span class="year"><?php echo $dischi[2]["year"] ?></span>
             </div>
+            <!-- /DISCHI ESEMPIO -->
 
-            <!-- /DISCO ESEMPIO -->
-
-            <!-- LISTA DISCHI -->
-            <!-- <div v-for="disco in selectArray()" class="cd">
-              <img :src="disco.poster" alt="">
-              <h3>{{disco.title}}</h3>
-              <span class="author">{{disco.author}}</span>
-              <span class="year">{{disco.year}}</span>
-            </div> -->
-            <!-- /LISTA DISCHI -->
 
           </div>
 
